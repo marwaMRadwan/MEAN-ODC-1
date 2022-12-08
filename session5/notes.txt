@@ -1,0 +1,15 @@
+todo app
+- add task (id, title, content, status, due data)
+- show all tasks
+- single task
+- edit task
+- activate
+- delete task
+- filter - search
+
+
+product
+product/single
+product/edit
+product/delete
+product/test
