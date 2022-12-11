@@ -1,0 +1,28 @@
+{{>header}}
+{{>navbar}}
+<section class="my-5 container">
+    <form method="post">
+         <div class="mb-3">
+            <input class="form-control" name="id" placeholder="id" value="{{result.id}}" disabled>
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="title" placeholder="title" value="{{result.title}}">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="content" placeholder="content" value="{{result.content}}">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="dueData" placeholder="dueDate" value="{{result.dueData}}">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" name="status" type="checkbox" id="flexCheckChecked" {{#if result.status}}checked{{/if}}>
+            <label class="form-check-label" for="flexCheckChecked">
+                Status
+            </label>
+</div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Edit</button>
+        </div>
+    </form>
+</section>
+{{>footer}}

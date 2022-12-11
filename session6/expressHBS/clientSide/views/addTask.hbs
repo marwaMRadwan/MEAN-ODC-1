@@ -1,0 +1,19 @@
+{{>header}}
+{{>navbar}}
+<section class="my-5 container">
+    <form action="/addLogic">
+        <div class="mb-3">
+            <input class="form-control" name="title" placeholder="title">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="content" placeholder="content">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="dueData" placeholder="dueDate" type="date">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Add</button>
+        </div>
+    </form>
+</section>
+{{>footer}}
