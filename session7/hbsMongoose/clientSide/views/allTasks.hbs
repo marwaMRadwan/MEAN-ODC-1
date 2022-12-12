@@ -1,0 +1,36 @@
+{{>header}}
+{{>navbar}}
+<section class="my-5 container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if hasTasks}}
+            {{#each tasks}}
+            <tr class="
+            {{#if status}} alert alert-success {{else}} alert alert-warning{{/if}}
+            ">
+                <td>{{id}}</td>
+                <td>{{title}}</td>
+                <td>
+                    <a href="/single/{{_id}}" class="btn btn-primary mx-3">show</a>
+                    <a href="/edit/{{_id}}" class="btn btn-warning mx-3">Edit</a>
+                    <a href="/del/{{_id}}" class="btn btn-danger mx-3">Delete</a>
+                    <a href="/changeStatus/{{_id}}" class="btn btn-success mx-3">change status</a>
+                </td>
+            </tr>
+            {{/each}}
+            {{else}}
+            <tr class="alert alert-danger">
+                <td colspan="3" class="text-center">no data  yet</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+</section>
+{{>footer}}
