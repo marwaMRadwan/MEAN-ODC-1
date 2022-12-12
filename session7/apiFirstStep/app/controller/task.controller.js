@@ -79,17 +79,19 @@ class Task{
             const result = await taskModel.findById(req.params.id)
             result.status = !result.status
             await result.save()
-            res.redirect("/")
+            res.status(200).send({apiStatus:true, data:result, message:"done"})
         }
         catch(e){
-            res.send(e.message)
+            res.status(500).send({apiStatus:false, data:e,message:e.message})
         }
     }
     static editTasksLogic = async(req,res)=>{
         try{
             (req.body.status=="on")? req.body.status=true : req.body.status=false
-            await taskModel.findByIdAndUpdate(req.params.id, req.body, {runValidators:true})
-            res.redirect(`/single/${req.params.id}`)
+            const result = await taskModel.findByIdAndUpdate(req.params.id, req.body, {runValidators:true})
+            res.status(200).send({
+                result: req.body
+            })
         }
         catch(e){
             res.send(e.message)
