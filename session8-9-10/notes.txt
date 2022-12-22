@@ -17,7 +17,13 @@ user:
  - edit password
  - forget password
 
-posts => add, getall, get single, delete, edit , get muy posts
+posts 
+ - add
+ - get my posts
+ - getall (isMine)
+ - get single
+ - delete
+ - edit
 
 
 

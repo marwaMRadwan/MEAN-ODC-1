@@ -1,0 +1,28 @@
+property crm:
+ => users (customer, employee, super admin)
+ => roles => url, roles 
+[
+    {
+        role: "super admin",
+        urls:[
+            "addUser", "addbuild", ....
+        ]
+    }
+]
+ => projects 
+ => project types (for show, for buy)
+ => buildings => floors => units => price (status=> bought, false) for each floor has 4 units
+ => payments => unit has customer and payment table
+ => reciept => pdf
+
+- projects => types => buy, show
+- projects=> build(number, area) => adwar=> each dour has 4 units
+- accountant => 1 c => 5 => 51 => bought
+- payments => down payment, 
+ربع سنوى => قيمه القسط 
+نص سنوي
+كاش
+
+ايصال => export pdf
+
+corn job

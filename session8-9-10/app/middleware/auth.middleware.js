@@ -9,6 +9,7 @@ const auth = async(req, res, next) => {
             _id: decodedToken._id,
             "tokens.token": token
         })
+        if(!userData) throw new Error("invalid token")
         req.user = userData
         req.token = token
         next()
