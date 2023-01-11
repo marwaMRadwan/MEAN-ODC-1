@@ -1,0 +1,14 @@
+unknown 
+
+any 
+null
+void -> undefined
+string-> enum[string]
+bigint
+number-> enum: number
+boolean
+symbol=> unique symbol
+object=> array, Function, constructor, tuple
+
+never
+union
