@@ -1,0 +1,23 @@
+
+<div class="row gy-3">
+    <div class="col-12 col-md-6 col-lg-4" 
+    *ngFor="let post of posts; let i = index ; let f = first; let l = last ; let e = even ; let o = odd; let c = count">
+        <div class="card" [ngClass]="{'alert alert-primary' : f , 'border-primary' : o , 'border-danger' :e }">
+            <div class="card-body">
+                <h1>{{i}}</h1>
+                <h2>first ==>  {{f}}</h2>
+                <h2>last ==>  {{l}}</h2>
+                <h2>even ==>  {{e}}</h2>
+                <h2>odd ==>  {{o}}</h2>
+                <h2>total ==>  {{c}}</h2>
+                <h3>{{post.title}}</h3>
+                <button class="btn btn-danger">Delete Post</button>
+                <button class="btn btn-info">Edit Post</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <h3 *ngFor="let num of numArray">{{num}}</h3> -->
+
+

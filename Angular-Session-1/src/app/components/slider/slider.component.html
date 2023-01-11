@@ -1,0 +1,49 @@
+<!-- interpolation -->
+<!-- <h2>{{title}}</h2>
+
+<h3>{{currentDate}}</h3>
+
+<h1>{{getFullName()}}</h1>
+
+<h5>{{100/2}}</h5>
+
+<img src="{{imgPath}}" alt=""> -->
+
+
+<!-- property binding -->
+<!-- 
+<img [src]="imgPath" alt="">
+
+<input [type]="inputType" name="" id="">
+
+<h4 [class]="customClass">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, perferendis.</h4>
+
+<table class="table border">
+    <tr>
+        <th [attr.colSpan]="colNum" class="text-center">Full Name</th>
+    </tr>
+    <tr>
+        <td>Nouran</td>
+        <td>Ahmed</td>
+        <td>Fayez</td>
+    </tr>
+</table>
+
+<input type="text" [name]="getInputName('userName')">
+
+<p [innerText]="text"></p>
+<p [innerHTML]="tag"></p> -->
+
+
+
+<!-- Event Binding -->
+<h1>{{h1Text}}</h1>
+<button class="btn btn-primary" (click)="handleClick()">Change Text</button>
+
+<input type="text" (input)="handleInput($event)">
+
+<input type="text" (change)="handleChange(userInput)"  #userInput>
+
+{{userInput.value}}
+
+<input type="text" (keyup.control.enter)="handleInput($event)">

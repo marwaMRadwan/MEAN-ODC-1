@@ -1,0 +1,26 @@
+Node
+npm install -g @angular/cli
+ng new appName (create app)
+
+
+index ==> navbar 
+          slider
+          services
+          contact
+          footer
+
+ng generate component navbar 
+
+-- Data Binding ==> one way Binding ==> Interpolation {{}}
+                                        property Binding (attribute Binding)
+                                        Event Binding
+
+                    two way binding ==> ngModel ==> property binding + event binding = [(ngModel)]   
+                                        import FormsModule from ""@angular/forms"
+
+-- directives ==> component Directive (component)    
+                  structure Directives ==> *ngFor , *ngIf , ngSwitch
+                  attribute Directives ==> ngModel , ngClass , ngStyle                                  
+
+
+
