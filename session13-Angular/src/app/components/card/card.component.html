@@ -1,0 +1,58 @@
+
+<!---------------- *ngIf Directive ------------------------------->
+<!-- <div class="container">
+    <p>cards Show</p>
+    <div *ngIf="showFlag ; else data  ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, id.
+    </div>
+
+    <ng-template #data>
+        <h2>Show In False</h2>
+    </ng-template>
+
+    <button class="btn btn-primary" (click)="handleShow()">Show Div</button>
+    <button class="btn btn-primary" (click)="showFlag = true">Show Div 2</button>
+    <button class="btn btn-primary" (click)="showFlag = !showFlag">Toggle Div 2</button>
+
+    <div class="alert alert-primary" *ngIf="arr.length > 4 ; then trueCondition ; else falseCondition ">
+       
+    </div>
+
+   <ng-template #trueCondition>
+        <div class="alert alert-danger">
+            in true Case
+        </div>
+   </ng-template>
+    <ng-template #falseCondition>
+        <div class="alert alert-dark ">
+            in false Case
+        </div>
+    </ng-template>
+</div> -->
+
+
+<!--------------------------- ngSwitch  ------------------------------------>
+<div class="container">
+    <div [ngSwitch]="num">
+        <ng-container *ngFor="let item of numArr ; let i = index">
+            <div class="alert alert-danger"  *ngSwitchCase="item" >number = {{item}}</div>
+        </ng-container>
+        <!-- <div class="alert alert-danger" *ngSwitchCase="'2'">number = 2</div>
+        <div class="alert alert-danger" *ngSwitchCase="'3'">number = 3</div>
+        <div class="alert alert-danger" *ngSwitchCase="'4'">number = 4</div> -->
+        <div class="alert-primary alert" *ngSwitchDefault>
+            invalid Number 
+        </div>
+    </div>
+</div>
+
+<!--------------------------- ngClass , ngStyle  ------------------------------------>
+
+<h2 [ngClass]="[borderClass , bgClass]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, odit.</h2>
+<h2 [ngClass]="(numArr.length > 3) ? bgClass : 'bg-danger'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, odit.</h2>
+<h2 [ngClass]="{'bg-danger' : true }">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, odit.</h2>
+
+
+<h1 [ngStyle]="{'color' : colorStyle }">lAngular</h1>
+
+<h4 [ngStyle]="{'background' : styleFlag == true ? 'blue' : 'yellow'}">Hello</h4>

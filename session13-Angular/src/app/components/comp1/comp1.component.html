@@ -1,0 +1,25 @@
+<div class="container">
+    <h3>{{currentDate | date : 'yyyy-MM-dd'}}</h3>
+
+    <h2>{{'lorem' | uppercase }}</h2>
+    <h2>{{'ANGULAR' | lowercase }}</h2>
+    <h2>{{'20' | currency }}</h2>
+
+    <h2>{{obj | json}}</h2>
+
+    <h1>{{text | slice : 0 : 10}}...</h1>
+
+    <h2 *ngFor="let item of arr | slice : 0 : 3">{{item}}</h2>
+
+    <div [ngSwitch]="getMonth">
+        <ng-container *ngFor="let mon of mL ; let i = index">
+            <div *ngSwitchCase="i">Month = {{mon}}</div>
+        </ng-container>
+    </div>
+
+
+    <h4>{{temp | convertTemp : 'F' }}</h4>
+    
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, accusantium?
+</div>
