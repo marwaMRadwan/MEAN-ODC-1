@@ -1,0 +1,18 @@
+
+
+<form class="row gy-4" #loginForm="ngForm" (ngSubmit)="handleSubmit(loginForm)">
+    <div class="col-12 alert alert-danger" *ngIf="errorFlag">
+      {{errorMsg}}
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <input type="email" class="form-control" placeholder="email"  required
+        name="email" #email="ngModel" [(ngModel)]="model.email" email >
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <input type="password" class="form-control" placeholder="password"  required
+        name="password" #password="ngModel" [(ngModel)]="model.password" >
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary">Login</button>
+    </div>
+</form>
