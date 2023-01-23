@@ -1,0 +1,12 @@
+<div class="container">
+    <form class="row" #fileUpload="ngForm" (ngSubmit)="handleSubmit()">
+        <div class="col-12">
+            <input type="file" class="form-control" (change)="handleChange($event)">
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary">
+                update Image
+            </button>
+        </div>
+    </form>
+</div>

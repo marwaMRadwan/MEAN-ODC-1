@@ -1,0 +1,40 @@
+
+<!-- Reactive Form  -->
+<div class="container">
+    <form class="row gy-4"  [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+        <div class="col-12 col-lg-6">
+            <input type="email" class="form-control"  placeholder="Email" formControlName="email">
+
+            <div class="alert alert-danger" *ngIf="isSubmit && userEmail?.invalid" >
+               
+                <div *ngIf="userEmail?.errors?.['required']">
+                    email is required
+                </div>
+                <div *ngIf="userEmail?.errors?.['email']">
+                    Invalid Email
+                </div>
+              <!-- <h5> errors  {{userEmail?.errors | json}} </h5>
+              <h5> touched  {{userEmail?.touched}} </h5>
+              <h5> valid {{userEmail?.valid}} </h5>
+              <h5> invalid  {{userEmail?.invalid}} </h5>
+              <h5> dirty  {{userEmail?.dirty}} </h5> -->
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <input type="password" class="form-control" placeholder="Password" formControlName="password">
+            <div class="alert alert-danger" *ngIf="userData?.['password']?.invalid">
+                <div *ngIf="userData?.['password']?.errors?.['required']">
+                    password is required
+                </div>
+
+            </div>
+        </div>
+        <!-- <div formGroupName="address">
+            <input type="text" placeholder="city" formControlName="city">
+            <input type="text" placeholder="city" formControlName="street">
+        </div> -->
+        <div class="col-12">
+            <button class="btn btn-primary">Login</button>
+        </div>
+    </form>
+</div>

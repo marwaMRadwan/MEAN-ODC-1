@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-body">
+                    <h3>{{singlePost?.title}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <h3>Latest Posts</h3>
+            <div class="alert alert-warning" *ngFor="let item of latestPosts | slice : 0 : 4">
+            <h3 routerLink="/posts/single/{{item.id}}">posts = {{item.id}}</h3> 
+            </div>
+        </div>
+    </div>
+</div>
