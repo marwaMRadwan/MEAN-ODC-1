@@ -1,0 +1,13 @@
+
+<form class="row mt-4 gy-3" #userData="ngForm" (ngSubmit)="handleSubmit()">
+    <div class="col-12 col-md-6">
+        <input type="text" class="form-control" name="userName" [(ngModel)]="model.userName" placeholder="username">
+    </div>
+    <div class="col-12 col-md-6">
+        <input type="text" class="form-control" name="userAge" [(ngModel)]="model.userAge" placeholder="age">
+    </div>
+    <div class="col-4">
+        <button class="btn btn-primary">Add User</button>
+
+    </div>
+</form>

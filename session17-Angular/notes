@@ -1,0 +1,12 @@
+-- Modules (lazy loading)
+-- ngrx 
+-- Animation
+-- https://github.com/ngx-translate/core  -- localization 
+
+
+-- ngx-bootstrap 
+-- ng-pagination
+-- ng-select
+-- ng-pdf-viewer
+-- ng-zoom
+-- ng-social-login

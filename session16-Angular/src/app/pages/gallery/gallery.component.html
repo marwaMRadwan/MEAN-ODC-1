@@ -1,0 +1,19 @@
+
+<div class="row justify-content-center">
+    <div class="col-6" *ngIf="loadingFlag">
+        <img src="assets/images/loading.gif" class="w-100">
+    </div>
+
+    <ng-container *ngIf="!loadingFlag">
+        <div class="col-4" *ngFor="let item of gallery"  >
+            <div class="card">
+                <!-- <img [src]="item.url" alt="" class="card-img-top"> -->
+                <img src="{{item.url}}" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h3>{{item.title}}</h3>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    
+</div>

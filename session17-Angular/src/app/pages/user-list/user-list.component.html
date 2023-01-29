@@ -1,0 +1,16 @@
+
+<app-user-form (sendUserData)="handleUser($event)"></app-user-form>
+<table class="table table-bordered mt-4">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of users">
+            <td>{{item.userName}}</td>
+            <td>{{item.userAge}}</td>
+        </tr>
+    </tbody>
+</table>

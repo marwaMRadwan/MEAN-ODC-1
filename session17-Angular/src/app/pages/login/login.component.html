@@ -1,0 +1,11 @@
+<form class="row gy-3 mt-3" [formGroup]="loginData"  (ngSubmit)="handleSubmit()">
+    <div class="col-6">
+        <input type="email" placeholder="email"  class="form-control" formControlName="email">
+    </div>
+    <div class="col-6">
+        <input type="password" placeholder="password" class="form-control" formControlName="password">
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary">Submit</button>
+    </div>
+</form>
